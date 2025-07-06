@@ -23,7 +23,6 @@
 
 **响应格式**: JSON
 
-**响应示例**:
 ```json
 {
   "statusCode": "200",
@@ -36,7 +35,8 @@
   "requestId": "61234567-89AB-CDEF-0123-456789ABCDEF"
 }
 
-### 请求例子
+```
+## NodeJs:
 
 const axios = require("axios");
 const OSS = require("ali-oss");
@@ -58,7 +58,7 @@ const getToken = async () => {
       bucket: "examplebucket",
       // 刷新临时访问凭证
       refreshSTSToken: async () => {
-        const refreshToken = await axios.get("http://localhost:8000/sts");
+        const refreshToken = await axios.get("http://localhost:8000//api/oss/get-oss-credentials");
         return {
           accessKeyId: refreshToken.data.AccessKeyId,
           accessKeySecret: refreshToken.data.AccessKeySecret,
