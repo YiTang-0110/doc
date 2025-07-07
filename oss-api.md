@@ -3,7 +3,7 @@
 ## 📋 API 概述
 
 **接口名称**: 获取阿里云 OSS 临时访问凭证  
-**接口路径**: `GET /api/oss/get-oss-credentials`  
+**接口路径**: `GET /api/oss/token`  
 **功能描述**: 通过阿里云 STS (Security Token Service) 服务获取临时访问凭证，用于客户端直接访问 OSS 存储桶
 
 ---
